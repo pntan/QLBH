@@ -1,0 +1,10 @@
+body {
+  background: var(--main-background);
+  color: var(--main-text-color); }
+  body #root {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw; }

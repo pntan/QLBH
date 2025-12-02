@@ -1,0 +1,68 @@
+.side-bar
+  width: 20vw
+  height: 100vh
+  background: var(--side-bar-background)
+  padding: 1vh 1vw
+  position: relative
+
+  .list-page
+    width: 100%
+    height: auto
+    max-height: calc(1000% - 5vh)
+    display: flex
+    flex-direction: column
+    gap: 1vh
+
+    .group-box
+      width: 100%
+      height: auto
+      background: var(--side-bar-box-background)
+      padding: 1vh 1vw
+      border-radius: 10px
+      transition: 0.5s
+
+      .group-title
+        font-size: 2vh
+        border-bottom-style: solid
+        border-bottom-width: 0
+
+      .group-content
+        width: 100%
+        height: 0
+        overflow: hidden
+        text-indent: 5%
+
+        .box
+          height: 3vh
+          line-height: auto
+          transition: 0.5s
+
+          &:first-child
+            margin-top: 1vh
+
+          &:hover
+            text-indent: 10%
+
+      &.active
+        .group-title
+          border-bottom-width: 1px
+
+        .group-content
+          height: fit-content
+
+  .log-out
+    position: absolute
+    width: 90%
+    left: 50%
+    bottom: 0
+    transform: translate(-50%)
+
+    button
+      width: 100%
+      height: 5vh
+      border: 2px solid crimson
+      transition: 0.5s
+
+      &:hover
+        background: crimson
+        color: #fff
