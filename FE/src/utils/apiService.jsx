@@ -1,7 +1,7 @@
 // utils/apiService.js
 
 // Lấy URL cơ sở từ biến môi trường (Nếu đang chạy cục bộ, nên dùng http://localhost:PORT)
-const BASE_URL = "http://localhost:2105";
+const BASE_URL = "http://localhost:215";
 
 /**
  * Hàm gọi API chung
@@ -85,6 +85,11 @@ export const checkAuthStatus = async () => {
     // Endpoint này sẽ trả về 200 OK nếu cookie hợp lệ, hoặc 401 nếu không
     const response = await request('/auth/authenticated', { method: 'POST' });
     return response.data.user; // Trả về thông tin người dùng nếu xác thực thành công
+};
+
+// 5. Lấy danh sách sản phẩm (GET)
+export const getProducts = () => {
+    return request('/product/list', { method: 'GET' });
 };
 
 export default request;

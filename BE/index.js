@@ -17,6 +17,7 @@ import * as fs from 'fs';
 // ⬅️ Các Utils và Router Cần Thiết
 import * as logs from './utils/logger.js'; 
 import * as auth from './router/auth.js';
+import productRouter from './router/product.js'; // Thêm router sản phẩm
 import * as ACCOUNT from "./utils/account.js";
 import { MongoDB } from "./utils/DB.js";
 // import * as SHOPEE from './utils/shopee/shopee.js'; // ❌ Bỏ
@@ -201,6 +202,12 @@ apiAuth.post("/logout", async (req, res) => {
   logs.log("Đăng xuất");
   auth.logout(req, res);
 })
+
+// -----------------------------------------------------
+// ROUTER PRODUCT
+// -----------------------------------------------------
+app.use("/product", productRouter);
+
 
 // -----------------------------------------------------
 // SOCKET.IO (XỬ LÝ KẾT NỐI REAL-TIME)
