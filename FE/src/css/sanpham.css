@@ -28,7 +28,8 @@
           width: 70%; }
   .sanpham .list-product {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    gap: 0.5vw; }
     .sanpham .list-product .product-box {
       width: 10vw;
       height: auto;
