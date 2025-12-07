@@ -92,4 +92,12 @@ export const getProducts = () => {
     return request('/product/list', { method: 'GET' });
 };
 
+// 6. Xóa nhiều sản phẩm (DELETE/JSON)
+export const deleteProducts = (ids) => {
+    return request('/product/delete', {
+        method: 'DELETE',
+        body: JSON.stringify({ ids }), // Gửi mảng các ID trong body
+    });
+};
+
 export default request;

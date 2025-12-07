@@ -39,31 +39,71 @@
     gap: 0.5vw
 
     .product-box
+      position: relative // Thêm để định vị overlay
       width: 10vw
       height: auto
       background: #f3f1f1
       padding: 1vh 1vw
       border-radius: 10px
-      transition: 0.5s
+      border: 2px solid transparent // Thêm viền trong suốt để không bị giật layout khi chọn
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease // Cập nhật transition
+      
+      // Hiển thị overlay khi hover hoặc khi box được chọn
+      &:hover, &.selected
+        .overlay
+          opacity: 1
+      
+      // Style cho box khi được chọn
+      &.selected
+        border-color: #007bff
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5)
 
       &:hover
         transform: scale(1.1)
 
-        .overlay
-          opacity: 1
-          display: block
-
       .overlay
         position: absolute
-        width: 2vh
-        height: 2vh
-        display: none
-        opacity: 0
-        transition: 3s
+        top: 0.25vh
+        left: 0.5vw
+        width: 20px // Kích thước cố định cho dễ style
+        height: 20px
+        opacity: 0 // Mặc định ẩn đi
+        transition: opacity 0.3s ease // Hiệu ứng mượt mà
+        z-index: 10 // Đảm bảo checkbox luôn ở trên
 
         input
+          // Ẩn checkbox mặc định
+          appearance: none
+          -webkit-appearance: none
+          -moz-appearance: none
+
+          // Style cho checkbox tùy chỉnh
+          cursor: pointer
           width: 100%
           height: 100%
+          background-color: #fff
+          border: 2px solid #adb5bd
+          border-radius: 4px
+          outline: none
+          transition: background-color 0.2s, border-color 0.2s
+          position: relative
+
+          // Style khi được check
+          &:checked
+            background-color: #007bff
+            border-color: #007bff
+
+            // Tạo dấu tick bằng pseudo-element
+            &::after
+              content: ''
+              position: absolute
+              left: 6px
+              top: 2px
+              width: 5px
+              height: 10px
+              border: solid white
+              border-width: 0 3px 3px 0
+              transform: rotate(45deg)
 
       .product-img
         width: 100%
@@ -93,3 +133,48 @@
 
         .cost
           font-size: 0.8vw
+
+  .floating-action-bar
+    position: fixed
+    bottom: 2vh
+    left: 50%
+    transform: translateX(-50%)
+    width: auto
+    height: auto
+    background: #dadada
+    padding: 1vh 1vw
+    border-radius: 10px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1vw
+
+    .button-actions
+      display: flex
+      flex-direction: row
+      gap: 1vw
+
+      button        
+        padding: 0.5vh 1vw
+        border-radius: 5px
+        font-weight: bold
+        cursor: pointer
+        transition: 0.3s
+
+      .copy-btn
+        background: #55a33d
+        border: none
+        color: #fff
+
+        &:hover
+          background: #3d6d2f
+
+
+      .delete-btn
+        background: #ff4d4d
+        border: none
+        color: #fff
+
+        &:hover
+          background: #e60000
