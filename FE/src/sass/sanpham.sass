@@ -14,13 +14,59 @@
     flex-direction: row
     align-items: center
     padding: 0.5vh 1vw
+    gap: 5vw
+
+    div
+      width: fit-content
+
+    .select-all
+      width: auto
+      height: auto
+      display: flex
+      flex-direction: row
+      align-items: center
+      gap: 0.5vw
+
+      input
+        // Ẩn checkbox mặc định
+        appearance: none
+        -webkit-appearance: none
+        -moz-appearance: none
+
+        // Style cho checkbox tùy chỉnh
+        cursor: pointer
+        width: 16px
+        height: 16px
+        background-color: #fff
+        border: 2px solid #adb5bd
+        border-radius: 4px
+        outline: none
+        transition: background-color 0.2s, border-color 0.2s
+        position: relative
+
+        // Style khi được check
+        &:checked
+          background-color: #007bff
+          border-color: #007bff
+
+          // Tạo dấu tick bằng pseudo-element
+          &::after
+            content: ''
+            position: absolute
+            left: 4px
+            top: 0px
+            width: 5px
+            height: 10px
+            border: solid white
+            border-width: 0 3px 3px 0
+            transform: rotate(45deg)
 
     .search-box
-      width: 100%
+      width: auto
       height: auto
 
       input
-        width: 30%
+        width: 100%
         height: 4vh
         text-indent: 3%
         border-radius: 10px
@@ -32,6 +78,22 @@
 
         &:focus, &:valid
           width: 70%
+    
+    .add-product-action
+      margin-left: auto // Đẩy nút về phía bên phải
+
+      .add-product-btn
+        padding: 0.8vh 1.2vw
+        background-color: #28a745
+        color: white
+        border: none
+        border-radius: 5px
+        font-weight: bold
+        cursor: pointer
+        transition: background-color 0.3s
+
+        &:hover
+          background-color: #218838
 
   .list-product
     display: flex

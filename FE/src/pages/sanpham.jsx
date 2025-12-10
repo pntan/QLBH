@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { getProducts, deleteProducts } from '../utils/apiService'; // Thêm deleteProducts
+import { getProducts, deleteProducts, addProduct } from '../utils/apiService'; // Thêm addProduct
 import "../css/sanpham.css";
+import AddProductModal from '../component/AddProduct/AddProductModal'; // Import modal
 
 function Sanpham(){
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedProducts, setSelectedProducts] = useState([]);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false); // State cho modal
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setIsLoading(true);
         const data = await getProducts(); // Gọi API để lấy danh sách sản phẩm
-        // Giả định API trả về { data: [...] }. Nếu key khác, hãy thay đổi 'data'
-        // Ví dụ: nếu API trả về { products: [...] } thì dùng data.products
-        // Kiểm tra xem data.data có phải là một mảng không trước khi set state
         setProducts(Array.isArray(data.data) ? data.data : []);
         setError(null);
       } catch (err) {
@@ -65,38 +64,67 @@ function Sanpham(){
 
     // Tạo danh sách tên và SKU để hiển thị trong thông báo xác nhận
     const productDetailsList = productsToDelete
-      .map(p => `- ${p.name} (SKU: ${p.sku})`)
-      .join('\n');
+      .map(p => ` ${p.name} (SKU: ${p.sku})`)
+      .join(',');
 
-    const confirmationMessage = `Bạn có chắc chắn muốn xóa ${selectedProducts.length} sản phẩm đã chọn?\n\n${productDetailsList}`;
+    const confirmationMessage = `${selectedProducts.length} phân loại bạn sắp xóa sẽ không được liên kết với các sản phẩm trên sàn. Vui lòng xác nhận bạn muốn xóa các phân loại sau:\n\n${productDetailsList}`;
 
-    // Hiển thị hộp thoại xác nhận
-    if (window.confirm(confirmationMessage)) {
-      try {
-        // Gọi API để xóa
-        await deleteProducts(selectedProducts);
-
-        // Cập nhật lại UI sau khi xóa thành công
-        setProducts(prevProducts => prevProducts.filter(p => !selectedProducts.includes(p._id)));
-        setSelectedProducts([]); // Xóa danh sách đã chọn
-
-        alert('Đã xóa các sản phẩm thành công!');
-      } catch (err) {
-        console.error("Lỗi khi xóa sản phẩm:", err);
-        alert('Đã xảy ra lỗi khi xóa sản phẩm. Vui lòng thử lại.');
+    Swal.fire({
+      title: 'Xác nhận xóa sản phẩm',
+      text: confirmationMessage, 
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Xóa',
+      cancelButtonText: 'Hủy',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          // Gọi API để xóa
+          await deleteProducts(selectedProducts);
+          // Cập nhật lại UI sau khi xóa thành công
+          setProducts(prevProducts => prevProducts.filter(p => !selectedProducts.includes(p._id)));
+          setSelectedProducts([]); // Xóa danh sách đã chọn
+          Swal.fire('Đã xóa!', 'Các sản phẩm đã được xóa thành công.', 'success');
+        } catch (err) {
+          console.error("Lỗi khi xóa sản phẩm:", err);
+          Swal.fire('Lỗi', 'Đã xảy ra lỗi khi xóa sản phẩm. Vui lòng thử lại.', 'error');
+        }
       }
-    }
+    });
+  };
+
+  // Hàm xử lý khi sản phẩm được thêm thành công
+  const handleProductAdded = (newProduct) => {
+    // Thêm sản phẩm mới vào đầu danh sách để người dùng thấy ngay
+    setProducts(prevProducts => [newProduct, ...prevProducts]);
+    // Hiển thị thông báo thành công
+    Swal.fire('Thành công!', 'Sản phẩm đã được thêm.', 'success');
   };
 
   return(
     <div className="sanpham">
-      <div className="top-bar">
-        <input type="checkbox" onChange={handleSelectAll} checked={products.length > 0 && selectedProducts.length === products.length} title="Chọn tất cả" />
+      {isAddModalOpen && (
+        <AddProductModal onClose={() => setIsAddModalOpen(false)} onProductAdded={handleProductAdded} />
+      )}
+
+      <div className="top-bar">        
+        <div className="select-all">
+          <input
+            id="select-all-checkbox"
+            type="checkbox"
+            checked={selectedProducts.length === products.length && products.length > 0}
+            onChange={handleSelectAll}
+          />
+          <label htmlFor="select-all-checkbox">Chọn tất cả</label>
+        </div>
         <div className="search-box">
           <input type="text" placeholder="Tìm kiếm" required />
         </div>
         <div className="category">
           {/* Có thể thêm bộ lọc danh mục ở đây */}
+        </div>
+        <div className="add-product-action">
+          <button className="add-product-btn" onClick={() => setIsAddModalOpen(true)}>+ Thêm sản phẩm</button>
         </div>
       </div>
 
