@@ -8,3 +8,26 @@ body {
     display: flex;
     flex-direction: row;
     gap: 1vw; }
+  body .popup {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .popup::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(18, 18, 18, 0.438);
+      z-index: 1; }
+    body .popup > .popup-content {
+      background: #fff;
+      z-index: 2;
+      padding: 2vh 2vw;
+      border-radius: 10px; }

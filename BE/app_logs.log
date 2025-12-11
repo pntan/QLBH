@@ -1,4 +1,84 @@
-[2025-12-09T23:59:10.542Z] [INFO] Chương trình đang chạy ở cổng 215!
-[2025-12-09T23:59:10.543Z] [INFO] Server đang khởi động...
-[2025-12-09T23:59:10.697Z] [INFO] Đã xóa nội dung file log: D:\QLBH\BE\app_logs.log
-[2025-12-09T23:59:12.943Z] [INFO] https://2a93492fa228.ngrok-free.app
+[2025-12-11T12:41:49.732Z] [INFO] Chương trình đang chạy ở cổng 215!
+[2025-12-11T12:41:49.733Z] [INFO] Server đang khởi động...
+[2025-12-11T12:41:49.765Z] [INFO] Đã xóa nội dung file log: D:\QLBH\BE\app_logs.log
+[2025-12-11T12:41:52.146Z] [INFO] https://530580bddca9.ngrok-free.app
+[2025-12-11T13:03:24.855Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:03:24.979Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:03:25.860Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:03:25.863Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:03:28.296Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:03:28.395Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:03:28.406Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:03:28.415Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:03:40.268Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:03:40.271Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:03:40.412Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:03:40.420Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:03:40.423Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:03:40.429Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:26:37.122Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:26:37.126Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:26:37.279Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:26:37.286Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:26:37.289Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:26:37.296Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:27:05.594Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:27:05.597Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:27:05.746Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:27:05.752Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:27:05.756Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:27:05.762Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:27:18.442Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:27:18.444Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:27:18.596Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:27:18.604Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:27:18.608Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:27:18.613Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:29:26.951Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:29:26.955Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:29:27.120Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:29:27.130Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:29:27.142Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:29:27.150Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:33:04.665Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:33:04.667Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:33:04.850Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:33:04.854Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:33:04.858Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:33:04.863Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:33:48.679Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:33:48.682Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:33:48.828Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:33:48.833Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:33:48.837Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:33:48.844Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:34:31.630Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:34:31.633Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:34:31.785Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:34:31.790Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:34:31.793Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:34:31.799Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:34:39.197Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:34:39.219Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:34:39.349Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:34:39.355Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:34:39.358Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:34:39.363Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:35:09.710Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:35:09.714Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:35:09.858Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:35:09.864Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:35:09.867Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:35:09.872Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:35:46.723Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:35:46.725Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T13:35:46.892Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:35:46.899Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T13:35:46.904Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T13:35:46.911Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T14:04:57.437Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T14:04:57.440Z] [INFO] Kiểm tra đăng nhập
+[2025-12-11T14:04:57.585Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T14:04:57.590Z] [INFO] [Product] Tìm thấy 3 sản phẩm.
+[2025-12-11T14:04:57.592Z] [INFO] [Product] Lấy danh sách sản phẩm cho UserID: USER-JR91-6AD84
+[2025-12-11T14:04:57.598Z] [INFO] [Product] Tìm thấy 3 sản phẩm.

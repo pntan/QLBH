@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getProducts, deleteProducts, addProduct } from '../utils/apiService'; // Thêm addProduct
 import "../css/sanpham.css";
-import AddProductModal from '../component/AddProduct/AddProductModal'; // Import modal
+import AddProductModal from '../component/addproduct/AddProductModal.jsx'; // Import modal
 
 function Sanpham(){
   const [products, setProducts] = useState([]);

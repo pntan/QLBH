@@ -100,4 +100,13 @@ export const deleteProducts = (ids) => {
     });
 };
 
+export const addProduct = (product) => {
+    return request('/product/add', {
+        method: 'POST',
+        body: JSON.stringify(product),
+    });
+};
+
+
+
 export default request;
